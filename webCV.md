@@ -32,7 +32,7 @@ B.S. Molecular Environmental Biology— Ecology concentration
 **Field Biologist/Student Researcher**, Richard B. Gump South Pacific Research Station, Mo’orea, French Polynesia (2018)
 - Studied the effects of temperature on decalcification in crustose coralline algae and the susceptibility to grazing of crustose coralline algae from different thermal environments.
 
-**Research Assistant, UC Berkeley**, Sousa Lab (2017)  
+**Research Assistant**, UC Berkeley, Sousa Lab (2017)  
 - Prepared leaves for stable isotope analysis and determined soil chemical composition as a part of doctoral candidate Audrey Hayne’s dissertation.
 
 **Research Assistant**, UC Berkeley, Koehl Lab (2016)
