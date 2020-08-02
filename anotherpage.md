@@ -3,9 +3,6 @@ layout: default
 ---
 
 ## About Me
-
-<h1> About Me </h1>
-
 <style>
       .circular--square {
         border-radius: 50%;
