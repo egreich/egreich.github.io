@@ -9,12 +9,12 @@ layout: default
 
 ### EDUCATION
 
-Northern Arizona University (In Progress)
-Ph.D. Informatics and Computing— Ecological and Environmental Informatics
+Northern Arizona University (In Progress)   
+Ph.D. Informatics and Computing— Ecological and Environmental Informatics  
 Advisor: Kiona Ogle 
 
-University of California, Berkeley (2019)
-B.S. Molecular Environmental Biology— Ecology concentration
+University of California, Berkeley (2019)   
+B.S. Molecular Environmental Biology— Ecology concentration  
 3.6 GPA
 
 
@@ -82,29 +82,29 @@ California Native Plant Society Conference (2018)
 
 ### PROFESSIONAL SOCIETIES
 
-California Native Plant Society (2018)
+California Native Plant Society (2018)  
 
-California Botanical Society (2018)
+California Botanical Society (2018)  
 
 
 ### CERTIFICATIONS
 
-Wilderness First Aid and CPR (2019)
+Wilderness First Aid and CPR (2019)  
 
-NSF Arctic Field Training (2019)
+NSF Arctic Field Training (2019)  
 
 
 ### SKILLS
 
-Plant identification
-Stable isotope analysis
-R
-Some data analysis in Python 
-Image J
-DNA extraction
-Excel
-Microsoft Office
-Fieldwork
-Data entry
-Experimental design
-Scientific writing and presenting
+Plant identification  
+Stable isotope analysis  
+R  
+Some data analysis in Python   
+Image J  
+DNA extraction  
+Excel  
+Microsoft Office  
+Fieldwork  
+Data entry  
+Experimental design  
+Scientific writing and presenting  
