@@ -20,14 +20,15 @@ In Progress	Northern Arizona University
 
 ### RESEARCH
 	
-2020      Graduate Research Assistant, Northern Arizona University
-          • Project— Ecohydrological controls on evapotranspiration across a semiarid elevation gradient, PI: Kimberly Samuels-Crow
+Graduate Research Assistant, Northern Arizona University (2020)
+
+- Project— Ecohydrological controls on evapotranspiration across a semiarid elevation gradient, PI: Kimberly Samuels-Crow
 
 2017-19   Research Assistant, UC Berkeley, Ackerly Lab
-          • Collaborated on project on vulnerability to embolism in California oaks led by Dr. Robert Skelton and Dr. Leander Anderegg.
-	  • Independent research on flower phenology and pollinator resources across a heterogeneous grassland landscape after fire disturbance.
-	  • Assisted with project on phenology dynamics in California grassland communities as part of doctoral candidate Rachael Olliff Yang’s dissertation.
-	  • Assisted with project on genetic diversity in red oaks. 
+- Collaborated on project on vulnerability to embolism in California oaks led by Dr. Robert Skelton and Dr. Leander Anderegg.
+- Independent research on flower phenology and pollinator resources across a heterogeneous grassland landscape after fire disturbance.
+- Assisted with project on phenology dynamics in California grassland communities as part of doctoral candidate Rachael Olliff Yang’s dissertation.
+- Assisted with project on genetic diversity in red oaks. 
 
 2018      Field Biologist/Student Researcher, Richard B. Gump South Pacific Research Station, Mo’orea, French Polynesia
 	  • Studied the effects of temperature on decalcification in crustose coralline algae and the susceptibility to grazing of crustose coralline algae from different thermal environments.
