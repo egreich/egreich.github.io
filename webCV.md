@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#CV
+# CV
 
 [PDF](./REICH CV.pdf)
 
