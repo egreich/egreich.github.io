@@ -59,9 +59,9 @@ Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kl
 
 ### AWARDS & FELLOWSHIPS
 
-NAU T3 Fellowship
+NAU T3 Fellowship (2021-22)
 
-NAU Presidential Fellowship Award
+NAU Presidential Fellowship Award (2020-24)
 
 
 ### SERVICE
