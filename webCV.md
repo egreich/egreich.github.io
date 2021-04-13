@@ -22,15 +22,15 @@ B.S. Molecular Environmental Biology— Ecology concentration
 
 *Spring 2021*
 
-Ecological Modeling \\
-Modern Regression II \\
-Data Mining & Machine Learning \\
+Ecological Modeling 
+Modern Regression II 
+Data Mining & Machine Learning 
 
 *Fall 2020*
 
-Advanced Survey in Ecoinformatics Tools \\
-Modern Regression I \\
-Concepts in Ecology \\
+Advanced Survey in Ecoinformatics Tools 
+Modern Regression I 
+Concepts in Ecology 
 
 *Spring 2019*
 
