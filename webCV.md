@@ -20,19 +20,19 @@ B.S. Molecular Environmental Biology— Ecology concentration
 
 ### GRADUTATE COURSEWORK
 
-Spring 2021 
+*Spring 2021*
 
 Ecological Modeling
 Modern Regression II
 Data Mining & Machine Learning
 
-Fall 2020 
+*Fall 2020*
 
-Advanced Survey in Ecoinformatics Tools
+Advanced Survey in Ecoinformatics Tools 
 Modern Regression I
 Concepts in Ecology
 
-Spring 2019 
+*Spring 2019*
 
 Stable Isotope Ecology (completed during undergraduate degree)
 
