@@ -12,16 +12,35 @@ layout: default
 Northern Arizona University (In Progress)   
 Ph.D. Informatics and Computing— Ecological and Environmental Informatics  
 Advisor: Kiona Ogle 
+4.0 GPA
 
 University of California, Berkeley (2019)   
 B.S. Molecular Environmental Biology— Ecology concentration  
 3.6 GPA
 
+### GRADUTATE COURSEWORK
+
+Spring 2021 
+
+Ecological Modeling
+Modern Regression II
+Data Mining & Machine Learning
+
+Fall 2020 
+
+Advanced Survey in Ecoinformatics Tools
+Modern Regression I
+Concepts in Ecology
+
+Spring 2019 
+
+Stable Isotope Ecology (completed during undergraduate degree)
+
 
 ### RESEARCH
 	
 **Graduate Research Assistant**, Northern Arizona University (2020)
-- Project— Ecohydrological controls on evapotranspiration across a semiarid elevation gradient, PI: Kimberly Samuels-Crow
+- Contributed to project on *Ecohydrological controls on evapotranspiration across a semiarid elevation gradient*, under the mentorship of Dr. Kiona Ogle and Dr. Kimberly Samuels-Crow.
 
 **Research Assistant**, UC Berkeley, Ackerly Lab (2017-19)
 - Collaborated on project on vulnerability to embolism in California oaks led by Dr. Robert Skelton and Dr. Leander Anderegg.
@@ -52,6 +71,8 @@ B.S. Molecular Environmental Biology— Ecology concentration
 
 ### PUBLICATIONS AND PRESENTATIONS
 
+Samuels-Crow, K. E., **Reich, E.**, Litvak, M. E., and K. Ogle. Across semiarid ecosystems, evapotranspiration responds to environmental drivers over longer timescales when conditions are dry. Poster presented at AGU Fall Meeting (2020).
+
 Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kling, M., Thompson, S. E., Diaz, J., and D. D. Ackerly. 2019. No local adaptation in leaf or stem xylem vulnerability to embolism, but consistent vulnerability segmentation in a North American oak. New Phytologist. doi.org/10.1111/nph.15886
 
 **Reich, E.** The acclimatization and susceptibility to grazing of crustose coralline algae from thermally variable and stable environments. Poster presented at the Bay Area Conservation Biology Symposium (2019). Talk presented at UC Berkeley Integrative Biology department symposium (2018).
@@ -59,18 +80,9 @@ Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kl
 
 ### AWARDS & FELLOWSHIPS
 
-NAU T3 Fellowship (2021-22)
+NAU T3 Fellowship
 
-NAU Presidential Fellowship Award (2020-24)
-
-
-### SERVICE
-
-**Wonderworks Volunteer** (2015-16)
-- Taught children ages 7-8 the science behind basic science experiments in a classroom setting.
-
-**Cal Triathlon Club Sustainability Chair** (2016-17)
-- Represented California Triathlon Club at UC Berkeley sustainability meetings and worked with student government representatives to promote sustainability.
+NAU Presidential Fellowship Award
 
 
 ### CONFERENCES ATTENDED
@@ -93,18 +105,3 @@ Wilderness First Aid and CPR (2019)
 
 NSF Arctic Field Training (2019)  
 
-
-### SKILLS
-
-Plant identification  
-Stable isotope analysis  
-R  
-Some data analysis in Python   
-Image J  
-DNA extraction  
-Excel  
-Microsoft Office  
-Fieldwork  
-Data entry  
-Experimental design  
-Scientific writing and presenting  
