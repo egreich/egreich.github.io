@@ -4,7 +4,7 @@ layout: default
 
 # Curriculum Vitae
 
-[PDF](./Reich CV.pdf)
+[PDF](./ReichCV.pdf)
 
 
 ### EDUCATION
