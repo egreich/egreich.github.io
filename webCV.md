@@ -4,7 +4,7 @@ layout: default
 
 # Curriculum Vitae
 
-[PDF](./REICH CV.pdf)
+[PDF](./Reich CV.pdf)
 
 
 ### EDUCATION
@@ -56,7 +56,10 @@ B.S. Molecular Environmental Biology— Ecology concentration
 **Prep Room Assistant**, UC Berkeley, Museum of Paleontology (2018-19)
 - Prepared marine vertebrate and invertebrate fossils from the Miocene as a part of the Calaveras Dam project.
 
+
 ### PUBLICATIONS AND PRESENTATIONS
+
+Reich, E., Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Water-use efficiency predictors along an aridity gradient. Presented at the 16th Biennial Conference of Science & Management on the Colorado Plateau and Southwest Region (2022).
 
 Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Litvak, M. E., Braford, J., and D. Schlaepfer. A mixture modeling approach for imputing missing environmental time-series data: Application to soil water content along an elevation gradient. Poster presented at ESA Meeting (2022).
 
@@ -87,17 +90,6 @@ NAU Presidential Fellowship Award recipient (2020)
 **Transcriptions Magazine editor/contributor**. An online zine with the goal of building community space for scientists who are trans, non-binary, two-spirit, and gender non-conforming.
 
 **International Society of Non-binary Scientists member**. An international community to build solidarity among non-binary scientists.
-
-
-### CONFERENCES ATTENDED
-
-16th Biennial Conference of Science & Management on the Colorado Plateau and Southwest Region (2022)
-
-Ecological Society of America (ESA) (2021)
-
-Bay Area Conservation Biology Symposium (2019)
-
-California Native Plant Society Conference (2018)  
 
 
 ### CERTIFICATIONS
