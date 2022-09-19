@@ -59,7 +59,7 @@ B.S. Molecular Environmental Biology— Ecology concentration
 
 ### PUBLICATIONS AND PRESENTATIONS
 
-Reich, E., Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Water-use efficiency predictors along an aridity gradient. Presented at the 16th Biennial Conference of Science & Management on the Colorado Plateau and Southwest Region (2022).
+**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Water-use efficiency predictors along an aridity gradient. Presented at the 16th Biennial Conference of Science & Management on the Colorado Plateau and Southwest Region (2022).
 
 Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Litvak, M. E., Braford, J., and D. Schlaepfer. A mixture modeling approach for imputing missing environmental time-series data: Application to soil water content along an elevation gradient. Poster presented at ESA Meeting (2022).
 
@@ -74,13 +74,13 @@ Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kl
 
 ### AWARDS & FELLOWSHIPS
 
-NASA FINESST recipient (2022)
+NASA FINESST recipient (2022-2025)
 
 NSF GRFP Honorable Mention (2021)
 
-NAU T3 Fellowship recipient (2020)
+NAU T3 Fellowship recipient (2020-2021)
 
-NAU Presidential Fellowship Award recipient (2020)
+NAU Presidential Fellowship Award recipient (2020-2024)
 
 
 ### SYNERGISTIC ACTIVITIES
