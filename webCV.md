@@ -10,8 +10,8 @@ layout: default
 ### EDUCATION
 
 Northern Arizona University (In Progress)   
-Ph.D. Informatics and Computing— Ecological and Environmental Informatics  
-Advisor: Kiona Ogle
+Ph.D. Informatics and Computing— Ecological and Environmental Informatics
+Advisor- Kiona Ogle
 4.0 GPA
 
 University of California, Berkeley (2019)   
@@ -110,6 +110,12 @@ Applied Bayesian Modeling
 Large-scale Data Structures and Organization \\
 Visualizing Scientific Results \\
 Ethics and Strategies in Science Communication
+
+*Fall 2021*
+
+Software Development & Methodologies \\
+Team-based Research \\
+Research Methods in Informatics and Computing
 
 *Spring 2021*
 
