@@ -15,3 +15,7 @@ layout: default
 ![](./plots/WUE_dYdXVPD_v3.png)
 
 ![](./plots/WUE_VPD_v3.png)
+
+![](./plots/net_sens_allsites_v3.png)
+
+![](./plots/net_sens_allsites2_v3.png)
