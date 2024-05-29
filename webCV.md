@@ -9,18 +9,18 @@ layout: default
 
 ### EDUCATION
 
-Northern Arizona University (In Progress)   
-Ph.D. Informatics and Computing— Ecological and Environmental Informatics
-Advisor- Kiona Ogle
-Year of Study: 5th year
+Northern Arizona University (In Progress)  \\
+Ph.D. Informatics and Computing— Ecological and Environmental Informatics \\
+Advisor- Kiona Ogle \\
+Year of Study: 5th year \\
 4.0 GPA
 
-Northern Arizona University (2023)   
-M.S. Informatics
+Northern Arizona University (2023) \\
+M.S. Informatics \\
 4.0 GPA
 
-University of California, Berkeley (2019)
-B.S. Molecular Environmental Biology— Ecology concentration
+University of California, Berkeley (2019) \\
+B.S. Molecular Environmental Biology— Ecology concentration \\
 3.6 GPA
 
 
