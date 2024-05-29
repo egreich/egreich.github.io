@@ -12,14 +12,21 @@ layout: default
 Northern Arizona University (In Progress)   
 Ph.D. Informatics and Computing— Ecological and Environmental Informatics
 Advisor- Kiona Ogle
+Year of Study: 5th year
 4.0 GPA
 
-University of California, Berkeley (2019)   
-B.S. Molecular Environmental Biology— Ecology concentration  
+Northern Arizona University (2023)   
+M.S. Informatics
+4.0 GPA
+
+University of California, Berkeley (2019)
+B.S. Molecular Environmental Biology— Ecology concentration
 3.6 GPA
 
 
 ### RESEARCH
+
+**NASA FINESST Fellow** (2023-present)
 
 **USGS Intern/ Graduate Research Assistant** (2022)
 - Project: *Assessing site-specific soil moisture release functions to improve dryland water balance models*.
@@ -59,6 +66,14 @@ B.S. Molecular Environmental Biology— Ecology concentration
 
 ### PUBLICATIONS AND PRESENTATIONS
 
+**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. A semi-mechanistic model for partitioning evapotranspiration reveals transpiration dominates the water flux in drylands. JGR Biogeosciences (2024). In review.
+
+**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Ecosystem-scale intrinsic water-Use efficiency is infrequently optimal in drylands. Poster presented at AGU Fall Meeting (2023).
+
+**Reich, E.**, Nelson, J., Lee, S-C., Zhang, Q., Migliavacca, M., Wohlfahrt, G., Paul-Limoges, E., Rossini, M., Martini, D., Zhang, Y., Kaushal, R., and K. Ogle. Evaluating photosynthesis-transpiration decoupling across timescales and ecosystems. Poster presented at FLUXNET Annual Meeting (2023).
+
+**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Evapotranspiration partitioning in drylands using eddy covariance and ECOSTRESS Data. Presented at AGU Fall Meeting (2022).
+
 **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Water-use efficiency predictors along an aridity gradient. Presented at the 16th Biennial Conference of Science & Management on the Colorado Plateau and Southwest Region (2022).
 
 Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Litvak, M. E., Braford, J., and D. Schlaepfer. A mixture modeling approach for imputing missing environmental time-series data: Application to soil water content along an elevation gradient. Poster presented at ESA Meeting (2022).
@@ -74,6 +89,8 @@ Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kl
 
 ### AWARDS & FELLOWSHIPS
 
+FLUXNET Secondment recipient (2023)
+
 NASA FINESST recipient (2022-2025)
 
 NSF GRFP Honorable Mention (2021)
@@ -82,15 +99,24 @@ NAU T3 Fellowship recipient (2020-2021)
 
 NAU Presidential Fellowship Award recipient (2020-2024)
 
+Most Compelling Research T3 speaker distinction (2020)
+
 
 ### SYNERGISTIC ACTIVITIES
 
+**FLUXNET Outreach Working Group member**. Planned pilot art residencies between flux tower PIs and artists.
+
 **NAU Informatics Broadening Participation Committee officer/founder**. An organization of graduate students with the aim to foster participation from underrepresented groups in science.
+
+**NAU Ecoinformatics Seminar 2022-2023 Early Career Honorarium Award founder**. Acquired funding to invite and compensate two early career researchers to speak at NAU per year.
+
+**ResBaz AZ 2023 Steering Committee member**. Assisting the planning of a collaborative research event for data-intensive training among quantitative scientists in Arizona.
 
 **Transcriptions Magazine editor/contributor**. An online zine with the goal of building community space for scientists who are trans, non-binary, two-spirit, and gender non-conforming.
 
 **International Society of Non-binary Scientists member**. An international community to build solidarity among non-binary scientists.
 
+**Women and Gender Diverse People in STEM Panel speaker**. A Northern Arizona University College of Environment, Forestry, and Natural Sciences organized panel for undergraduates.
 
 ### CERTIFICATIONS
 
@@ -100,6 +126,10 @@ NSF Arctic Field Training (2019)
 
 
 ### GRADUTATE COURSEWORK
+
+*Spring 2023*
+
+Writing Scientific Papers
 
 *Fall 2022*
 
