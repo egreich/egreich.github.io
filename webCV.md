@@ -16,7 +16,7 @@ Year of Study: 5th year \\
 4.0 GPA
 
 Northern Arizona University (2023) \\
-M.S. Informatics \\
+M.S. Informatics with Distinction\\
 4.0 GPA
 
 University of California, Berkeley (2019) \\
@@ -27,6 +27,9 @@ B.S. Molecular Environmental Biology— Ecology concentration \\
 ### RESEARCH
 
 **NASA FINESST Fellow** (2023-present)
+
+**FLUXNET Secondment Fellow** (2023)
+- Project: *Decoupling of transpiration and photosynthesis at the ecosystem scale*, under the mentorship of Dr. Jake Nelson and Dr. Sung-Ching Lee.
 
 **USGS Intern/ Graduate Research Assistant** (2022)
 - Project: *Assessing site-specific soil moisture release functions to improve dryland water balance models*.
@@ -66,7 +69,7 @@ B.S. Molecular Environmental Biology— Ecology concentration \\
 
 ### PUBLICATIONS AND PRESENTATIONS
 
-**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. A semi-mechanistic model for partitioning evapotranspiration reveals transpiration dominates the water flux in drylands. JGR Biogeosciences (2024). In review.
+**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. 2024. A semi-mechanistic model for partitioning evapotranspiration reveals transpiration dominates the water flux in drylands. JGR Biogeosciences. https://doi.org/10.1029/2023JG007914.
 
 **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Ecosystem-scale intrinsic water-Use efficiency is infrequently optimal in drylands. Poster presented at AGU Fall Meeting (2023).
 
@@ -76,11 +79,7 @@ B.S. Molecular Environmental Biology— Ecology concentration \\
 
 **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Water-use efficiency predictors along an aridity gradient. Presented at the 16th Biennial Conference of Science & Management on the Colorado Plateau and Southwest Region (2022).
 
-Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Litvak, M. E., Braford, J., and D. Schlaepfer. A mixture modeling approach for imputing missing environmental time-series data: Application to soil water content along an elevation gradient. Poster presented at ESA Meeting (2022).
-
 **Reich, E.**, Samuels-Crow, K. E., Litvak, M. E., and K. Ogle. Partitioning evapotranspiration in drylands using eddy covariance fluxes and ECOSTRESS data. Poster presented at ESA Meeting (2021).
-
-Samuels-Crow, K. E., **Reich, E.**, Litvak, M. E., and K. Ogle. Across semiarid ecosystems, evapotranspiration responds to environmental drivers over longer timescales when conditions are dry. Poster presented at AGU Fall Meeting (2020).
 
 Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kling, M., Thompson, S. E., Diaz, J., and D. D. Ackerly. 2019. No local adaptation in leaf or stem xylem vulnerability to embolism, but consistent vulnerability segmentation in a North American oak. New Phytologist. doi.org/10.1111/nph.15886
 
