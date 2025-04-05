@@ -15,10 +15,10 @@ Bayesian/Machine Learning Models | R/Python/Javascript | Water/Carbon Models | S
 
 Northern Arizona University  \\
 Ph.D. Informatics and Computing— Ecological and Environmental Informatics \\
-M.S. Informatics with Distinction \
+M.S. Informatics with Distinction 
 
 University of California, Berkeley \\
-B.S. Molecular Environmental Biology— Ecology concentration \
+B.S. Molecular Environmental Biology— Ecology concentration 
 
 
 ### RESEARCH
