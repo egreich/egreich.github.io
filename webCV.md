@@ -40,7 +40,7 @@ Produced 7 total scientific manuscripts (1 in preparation, 2 in review, 4 publis
 **Field Botany Technician**, National Ecological Observatory Network, Alaska (2019)
 - Collected vegetation diversity data in northern Alaska taiga and tundra ecosystems.
 
-**Research Assistant**, UC Berkeley, Ackerly Lab (2017-19)
+**Research Assistant**, UC Berkeley, Ackerly Lab (2017-19) 
 - Collaborated on projects related to plant water-use, xylem embolism, fire disturbance, phenology.
 
 **Research Assistant**, UC Berkeley, Museum of Paleontology (2018-19)
