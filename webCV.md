@@ -71,7 +71,7 @@ Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlae
 
 **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Ecosystem-scale intrinsic water-Use efficiency is infrequently optimal in drylands. Poster presented at AGU Fall Meeting (2023).
 
-**Reich, E.**, Nelson, J., Lee, S-C., Zhang, Q., Migliavacca, M., Wohlfahrt, G., Paul-Limoges, E., Rossini, M., Zhang, Y., El-Madany, T., Damm-Reiser, A., Brümmer, C., Buchmann, N., and K.  Ogle. Evaluating photosynthesis-transpiration decoupling across timescales and ecosystems. Poster presented at FLUXNET Annual Meeting (2023).
+**Reich, E.**, Nelson, J., Lee, S-C., Zhang, Q., Migliavacca, M., Wohlfahrt, G., Paul-Limoges, E., Rossini, M., Zhang, Y., El-Madany, T., Damm-Reiser, A., Brummer, C., Buchmann, N., and K.  Ogle. Evaluating photosynthesis-transpiration decoupling across timescales and ecosystems. Poster presented at FLUXNET Annual Meeting (2023).
 
 **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. Evapotranspiration partitioning in drylands using eddy covariance and ECOSTRESS Data. Presented at AGU Fall Meeting (2022).
 
