@@ -15,10 +15,10 @@ Bayesian/Machine Learning Models | R/Python/Javascript | Water/Carbon Models | S
 
 Northern Arizona University  \\
 Ph.D. Informatics and Computing— Ecological and Environmental Informatics \\
-M.S. Informatics with Distinction \\
+M.S. Informatics with Distinction \
 
 University of California, Berkeley \\
-B.S. Molecular Environmental Biology— Ecology concentration \\
+B.S. Molecular Environmental Biology— Ecology concentration \
 
 
 ### RESEARCH
@@ -26,7 +26,7 @@ B.S. Molecular Environmental Biology— Ecology concentration \\
 Produced 7 total scientific manuscripts (1 in preparation, 2 in review, 4 published), collaborating with researchers from multiple U.S federal agencies, academic institutions, and industry.
 
 **NASA FINESST Fellow/ Scientific Researcher** (2023-present)
-• Project: *Disentangling ecosystem-scale controls on coupled water and carbon fluxes.*
+- Project: *Disentangling ecosystem-scale controls on coupled water and carbon fluxes.*
 
 **FLUXNET Secondment Fellow/ Visiting Scientific Researcher** (2023)
 - Project: *Decoupling of transpiration and photosynthesis at the ecosystem scale*, under the mentorship of Dr. Jake Nelson and Dr. Sung-Ching Lee.
@@ -63,7 +63,7 @@ Produced 7 total scientific manuscripts (1 in preparation, 2 in review, 4 publis
 
 **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. In review. Drylands do not use water efficiently for carbon gain. *New Phytologist*.
 
-**Reich, E.** and Guo, J., Peltier, D., Palmquist, E., Samuels-Crow, K. E., Boone, R., and K. Ogle. In review. Precipitation pulse dynamics are not ubiquitous: A global meta-analysis of plant and ecosystem carbon- and water-related pulse responses. *Global Change Biology*. https://d197for5662m48.cloudfront.net/documents/publicationstatus/228763/preprint_pdf/b23f8a8e86fae304ab5408202eb4e849.pdf
+**Reich, E.** and Guo, J., Peltier, D., Palmquist, E., Samuels-Crow, K. E., Boone, R., and K. Ogle. In review. Precipitation pulse dynamics are not ubiquitous: A global meta-analysis of plant and ecosystem carbon- and water-related pulse responses. *Global Change Biology*.
 
 Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and M. Devan. 2024. Filling the gaps: A Bayesian mixture model for imputing missing soil water content data. *Ecohydrology*. https://doi.org/10.1002/eco.70004
 
@@ -86,15 +86,15 @@ Skelton, R. P., Anderegg, L. D. L., Papper, P., **Reich, E.**, Dawson, T. E., Kl
 
 ### AWARDS & FELLOWSHIPS
 
-FLUXNET Secondment recipient (2023)
+FLUXNET Secondment recipient, $8,000 (2023)
 
-NASA FINESST recipient (2022-2025)
+NASA FINESST recipient, $150,000 (2022-2025)
 
 NSF GRFP Honorable Mention (2021)
 
-NAU T3 Fellowship recipient (2020-2021)
+NAU T3 Fellowship recipient, $98,000 (2020-2021)
 
-NAU Presidential Fellowship Award recipient (2020-2024)
+NAU Presidential Fellowship Award recipient, $36,000 (2020-2024)
 
 Most Compelling Research T3 speaker distinction (2020)
 
@@ -125,7 +125,7 @@ Writing Scientific Papers \\
 Applied Bayesian Modeling \\
 Large-scale Data Structures and Organization \\
 Visualizing Scientific Results \\
-Ethics and Strategies in Science Communication
+Ethics and Strategies in Science Communication \\
 Software Development & Methodologies \\
 Team-based Research \\
 Research Methods in Informatics and Computing \\
