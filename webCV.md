@@ -41,7 +41,7 @@ Produced 7 total scientific manuscripts (1 in preparation, 2 in review, 4 publis
 - Collected vegetation diversity data in northern Alaska taiga and tundra ecosystems.
 
 **Research Assistant**, UC Berkeley, Ackerly Lab (2017-19)
-- Collaborated on projects related to plant water-use, xylem embolism, fire disturbance, phenology.
+- Collaborated on projects related to plant water-use, xylem embolism, fire disturbance, phenology.
 
 **Research Assistant**, UC Berkeley, Museum of Paleontology (2018-19)
 - Prepared marine vertebrate and invertebrate fossils from the Miocene as a part of the Calaveras Dam project.
