@@ -4,8 +4,6 @@ layout: default
 
 # Curriculum Vitae
 
-**Researcher in Informatics and Computing at Northern Arizona University**, specializing in ecological and environmental informatics. Possess a unique blend of quantitative, scientific, and R&D expertise to craft scalable solutions. Leverage machine learning and data science to analyze environmental datasets, uncovering hidden spatial and temporal insights. Noteworthy for incorporating plant ecophysiology, soil physical properties, and ecohydrology into interdisciplinary research on land water-use and carbon gain and water resource management. Adept in project management, detail-oriented, and possesses a keen research acumen with a solution-focused approach. A strong communicator known for building collaborative relationships across disciplines, upholding the highest ethical standards.
-
 
 ### Highlighted Skills
 Bayesian/Machine Learning Models | R/Python/Javascript | Water/Carbon Models | Soil Physical Properties Expertise | Plant Ecophysiology Expertise
@@ -15,32 +13,33 @@ Bayesian/Machine Learning Models | R/Python/Javascript | Water/Carbon Models | S
 
 Northern Arizona University  \\
 Ph.D. Informatics and Computing— Ecological and Environmental Informatics \\
-M.S. Informatics with Distinction 
+M.S. Informatics with Distinction
 
 University of California, Berkeley \\
-B.S. Molecular Environmental Biology— Ecology concentration 
+B.S. Molecular Environmental Biology— Ecology concentration
 
 
 ### RESEARCH
 
-Produced 7 total scientific manuscripts (1 in preparation, 2 in review, 4 published), collaborating with researchers from multiple U.S federal agencies, academic institutions, and industry.
+**Postdoctoral Scholar Research Associate in Environmental Science and Engineering** Caltech (present)
+- Project: *Using SMAP characteristics to learn about ecosystem water strategy distributions.*
 
-**NASA FINESST Fellow/ Scientific Researcher** (2023-present)
+**NASA FINESST Fellow/ Scientific Researcher** Northern Arizona University (2023-2025)
 - Project: *Disentangling ecosystem-scale controls on coupled water and carbon fluxes.*
 
 **FLUXNET Secondment Fellow/ Visiting Scientific Researcher** (2023)
 - Project: *Decoupling of transpiration and photosynthesis at the ecosystem scale*, under the mentorship of Dr. Jake Nelson and Dr. Sung-Ching Lee.
 
-**USGS Scientific Research Fellow** (2022)
+**USGS Scientific Research Fellow** Northern Arizona University (2022)
 - Project: *Assessing site-specific soil moisture release functions to improve dryland water balance models*.
 
-**T3 Ecoinformatics Fellow/ Scientific Researcher** (2020)
+**T3 Ecoinformatics Fellow/ Scientific Researcher** Northern Arizona University (2020)
 - Project: *Ecohydrological controls on evapotranspiration across a semiarid elevation gradient*.
 
 **Field Botany Technician**, National Ecological Observatory Network, Alaska (2019)
 - Collected vegetation diversity data in northern Alaska taiga and tundra ecosystems.
 
-**Research Assistant**, UC Berkeley, Ackerly Lab (2017-19) 
+**Research Assistant**, UC Berkeley, Ackerly Lab (2017-19)
 - Collaborated on projects related to plant water-use, xylem embolism, fire disturbance, phenology.
 
 **Research Assistant**, UC Berkeley, Museum of Paleontology (2018-19)
@@ -61,9 +60,9 @@ Produced 7 total scientific manuscripts (1 in preparation, 2 in review, 4 publis
 
 ### PUBLICATIONS AND PRESENTATIONS
 
-**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. In review. Drylands do not use water efficiently for carbon gain. *New Phytologist*.
+**Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. In review. Drylands do not use water efficiently for carbon gain. *Agricultural and Forest Meteorology*.
 
-**Reich, E.** and Guo, J., Peltier, D., Palmquist, E., Samuels-Crow, K. E., Boone, R., and K. Ogle. In review. Precipitation pulse dynamics are not ubiquitous: A global meta-analysis of plant and ecosystem carbon- and water-related pulse responses. *Global Change Biology*.
+**Reich, E.** and Guo, J., Peltier, D., Palmquist, E., Samuels-Crow, K. E., Boone, R., and K. Ogle. 2025. Precipitation pulse dynamics are not ubiquitous: A global meta-analysis of plant and ecosystem carbon- and water-related pulse responses. *Global Change Biology*.
 
 Ogle, K., **Reich, E.**, Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and M. Devan. 2024. Filling the gaps: A Bayesian mixture model for imputing missing soil water content data. *Ecohydrology*. https://doi.org/10.1002/eco.70004
 
