@@ -1,69 +1,166 @@
 ---
 layout: default
-title: Creosote Bush Finder
+title: Creosote Shrub Finder
 ---
 
-<h1>Nearest Creosote Bush Finder</h1>
+<h1>Nearest Creosote Shrub Finder</h1>
+
+<p style="margin-bottom: 20px; line-height: 1.6;">
+  Everyone loves creosote. However, most of us share a common problem: when we want to find a creosote shrub 
+  (<em>Larrea tridentata</em>), we often don't know where to look! To solve this dilemma, I've created this remarkable tool, so anyone, anywhere, anytime, can find their nearest creosote shrub.
+  This tool uses real-time biodiversity data from the Global Biodiversity Information Facility (GBIF) 
+  to calculate the distance between you and the nearest documented creosote shrub occurrence.
+</p>
 
 <style>
   #map {
-    height: 500px;
+    height: 600px;
     width: 100%;
     margin: 20px 0;
-    border: 2px solid #333;
-    border-radius: 8px;
+    border: 3px solid #00ff88;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #map::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 200, 255, 0.1) 100%);
+    pointer-events: none;
+    z-index: 1000;
   }
   
   .info-panel {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 25px;
+    border-radius: 12px;
     margin-bottom: 20px;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+    color: #e0e0e0;
+  }
+  
+  .info-panel strong {
+    color: #00ff88;
   }
   
   .distance-display {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    color: #2c5f2d;
+    color: #00ff88;
     margin: 10px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    font-family: 'Courier New', monospace;
   }
   
   .status-message {
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
-    border-radius: 4px;
-    background: #e8f4f8;
-    border-left: 4px solid #2196F3;
+    border-radius: 6px;
+    background: rgba(0, 255, 136, 0.1);
+    border-left: 4px solid #00ff88;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
   }
   
   .error-message {
-    background: #ffebee;
-    border-left-color: #f44336;
+    background: rgba(255, 68, 68, 0.1);
+    border-left-color: #ff4444;
+    color: #ff4444;
   }
   
   .loading {
-    color: #666;
+    color: #00ccff;
     font-style: italic;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
   
   button {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+    background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+    color: #0a0a0a;
+    padding: 12px 24px;
+    border: 2px solid #00ff88;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     margin: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
   }
   
   button:hover {
-    background: #45a049;
+    background: linear-gradient(135deg, #00ffaa 0%, #00ee88 100%);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+    transform: translateY(-2px);
   }
   
   button:disabled {
-    background: #ccc;
+    background: #333;
     cursor: not-allowed;
+    border-color: #555;
+    box-shadow: none;
+    color: #666;
+  }
+  
+  input[type="text"] {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #00ff88;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #666;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  }
+  
+  .map-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+    background: rgba(26, 26, 46, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  }
+  
+  .map-controls label {
+    color: #00ff88;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .map-controls select {
+    background: rgba(0, 0, 0, 0.5);
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
   }
 </style>
 
@@ -73,7 +170,7 @@ title: Creosote Bush Finder
      crossorigin=""/>
 
 <div class="info-panel">
-  <p>Find out how close you are to a creosote bush (<em>Larrea tridentata</em>)!</p>
+  <p>Find out how close you are to a creosote shrub (<em>Larrea tridentata</em>)!</p>
   
   <div style="margin-bottom: 15px;">
     <button id="findButton" onclick="findNearestCreosote()">Use My Location</button>
@@ -103,11 +200,22 @@ title: Creosote Bush Finder
   </div>
 </div>
 
-<div id="map"></div>
+<div style="position: relative;">
+  <div id="map"></div>
+  <div class="map-controls">
+    <label for="mapStyle">MAP STYLE</label>
+    <select id="mapStyle" onchange="changeMapStyle()">
+      <option value="dark">Dark Mode</option>
+      <option value="satellite">Satellite</option>
+      <option value="terrain">Terrain</option>
+      <option value="standard">Standard</option>
+    </select>
+  </div>
+</div>
 
 <div style="margin-top: 20px; font-size: 12px; color: #666;">
   <p>Data sources: <a href="https://www.gbif.org" target="_blank">GBIF (Global Biodiversity Information Facility)</a></p>
-  <p>Creosote bush occurrences are based on publicly available biodiversity records. Results may vary based on data availability in your region.</p>
+  <p>Creosote shrub occurrences are based on publicly available biodiversity records. Results may vary based on data availability in your region.</p>
 </div>
 
 <!-- Leaflet JavaScript -->
@@ -121,17 +229,64 @@ title: Creosote Bush Finder
   let creosoteMarker;
   let userLocation = null;
   let nearestCreosote = null;
+  let currentTileLayer = null;
+  let polyline = null;
 
-  // Initialize map
+  // Map tile layer options
+  const mapStyles = {
+    dark: {
+      url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+      attribution: '© OpenStreetMap contributors © CARTO',
+      maxZoom: 19
+    },
+    satellite: {
+      url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      attribution: 'Tiles © Esri',
+      maxZoom: 19
+    },
+    terrain: {
+      url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+      attribution: '© OpenStreetMap contributors, SRTM | © OpenTopoMap',
+      maxZoom: 17
+    },
+    standard: {
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }
+  };
+
+  // Initialize map with dark mode
   function initMap(lat = 34.0522, lon = -118.2437) {
     if (!map) {
-      map = L.map('map').setView([lat, lon], 10);
+      map = L.map('map', {
+        zoomControl: true,
+        zoomAnimation: true,
+        fadeAnimation: true,
+        markerZoomAnimation: true
+      }).setView([lat, lon], 10);
       
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 18
+      // Start with dark mode
+      currentTileLayer = L.tileLayer(mapStyles.dark.url, {
+        attribution: mapStyles.dark.attribution,
+        maxZoom: mapStyles.dark.maxZoom
       }).addTo(map);
     }
+  }
+  
+  // Change map style
+  function changeMapStyle() {
+    const style = document.getElementById('mapStyle').value;
+    const mapStyle = mapStyles[style];
+    
+    if (currentTileLayer) {
+      map.removeLayer(currentTileLayer);
+    }
+    
+    currentTileLayer = L.tileLayer(mapStyle.url, {
+      attribution: mapStyle.attribution,
+      maxZoom: mapStyle.maxZoom
+    }).addTo(map);
   }
 
   // Calculate distance between two points using Haversine formula
@@ -164,9 +319,9 @@ title: Creosote Bush Finder
     statusDiv.innerHTML = message;
   }
 
-  // Fetch creosote bush occurrences from GBIF
+  // Fetch creosote shrub occurrences from GBIF
   async function fetchCreosoteData(lat, lon, maxDistance = null) {
-    showStatus('<span class="loading">Searching for creosote bushes worldwide...</span>');
+    showStatus('<span class="loading">Searching for creosote shrubs worldwide...</span>');
     
     // Larrea tridentata taxon key in GBIF (nubKey for accepted species)
     const taxonKey = 7568403;
@@ -241,7 +396,7 @@ title: Creosote Bush Finder
     return allResults;
   }
 
-  // Find the nearest creosote bush
+  // Find the nearest creosote shrub
   function findNearest(userLat, userLon, creosoteBushes) {
     let nearest = null;
     let minDistance = Infinity;
@@ -405,7 +560,7 @@ title: Creosote Bush Finder
       const creosoteBushes = await fetchCreosoteData(lat, lon);
       
       if (creosoteBushes.length === 0) {
-        showStatus('No creosote bush records found in GBIF database. This is unusual - please try again later.', true);
+        showStatus('No creosote shrub records found in GBIF database. This is unusual - please try again later.', true);
         findButton.disabled = false;
         return;
       }
@@ -428,16 +583,50 @@ title: Creosote Bush Finder
         })
       }).addTo(map).bindPopup(`<b>Nearest Creosote Bush</b><br>${nearestCreosote.locality}<br>Distance: ${formatDistance(nearestCreosote.distance)}`);
       
-      // Draw line between user and creosote
-      L.polyline([
-        [lat, lon],
-        [nearestCreosote.lat, nearestCreosote.lon]
-      ], {
-        color: '#2c5f2d',
-        weight: 3,
-        opacity: 0.7,
-        dashArray: '10, 10'
+      // Draw glowing animated line between user and creosote
+      if (polyline) {
+        map.removeLayer(polyline);
+      }
+      
+      // Create a pulsing effect with multiple lines
+      const latlngs = [[lat, lon], [nearestCreosote.lat, nearestCreosote.lon]];
+      
+      // Background glow
+      L.polyline(latlngs, {
+        color: '#00ff88',
+        weight: 8,
+        opacity: 0.3,
+        className: 'polyline-glow'
       }).addTo(map);
+      
+      // Main line
+      polyline = L.polyline(latlngs, {
+        color: '#00ff88',
+        weight: 3,
+        opacity: 0.9,
+        dashArray: '10, 10',
+        className: 'polyline-main'
+      }).addTo(map);
+      
+      // Add custom CSS for line animation
+      if (!document.getElementById('polyline-animation-style')) {
+        const style = document.createElement('style');
+        style.id = 'polyline-animation-style';
+        style.innerHTML = `
+          @keyframes dash {
+            to {
+              stroke-dashoffset: -100;
+            }
+          }
+          .polyline-main {
+            animation: dash 2s linear infinite;
+          }
+          .polyline-glow {
+            filter: blur(4px);
+          }
+        `;
+        document.head.appendChild(style);
+      }
       
       // Fit map to show both markers
       const bounds = L.latLngBounds([
