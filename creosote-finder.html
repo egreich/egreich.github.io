@@ -1,0 +1,473 @@
+---
+layout: default
+title: Creosote Bush Finder
+---
+
+<h1>Nearest Creosote Bush Finder</h1>
+
+<style>
+  #map {
+    height: 500px;
+    width: 100%;
+    margin: 20px 0;
+    border: 2px solid #333;
+    border-radius: 8px;
+  }
+  
+  .info-panel {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .distance-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c5f2d;
+    margin: 10px 0;
+  }
+  
+  .status-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    background: #e8f4f8;
+    border-left: 4px solid #2196F3;
+  }
+  
+  .error-message {
+    background: #ffebee;
+    border-left-color: #f44336;
+  }
+  
+  .loading {
+    color: #666;
+    font-style: italic;
+  }
+  
+  button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+</style>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+<div class="info-panel">
+  <p>Find out how close you are to a creosote bush (<em>Larrea tridentata</em>)!</p>
+  
+  <div style="margin-bottom: 15px;">
+    <button id="findButton" onclick="findNearestCreosote()">Use My Location</button>
+    <button id="refreshButton" onclick="refreshData()" style="display:none;">Refresh Data</button>
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <strong>Or enter a location manually:</strong>
+    <div style="margin-top: 10px;">
+      <input type="text" id="zipInput" placeholder="Enter ZIP code (US)" style="padding: 8px; margin-right: 5px; border: 1px solid #ccc; border-radius: 4px; width: 150px;">
+      <button onclick="searchByZip()" style="background: #2196F3;">Search by ZIP</button>
+    </div>
+    <div style="margin-top: 10px;">
+      <input type="text" id="latInput" placeholder="Latitude" style="padding: 8px; margin-right: 5px; border: 1px solid #ccc; border-radius: 4px; width: 100px;">
+      <input type="text" id="lonInput" placeholder="Longitude" style="padding: 8px; margin-right: 5px; border: 1px solid #ccc; border-radius: 4px; width: 100px;">
+      <button onclick="searchByCoordinates()" style="background: #2196F3;">Search by Coordinates</button>
+    </div>
+  </div>
+  
+  <div id="statusMessage"></div>
+  
+  <div id="distanceInfo" style="display:none;">
+    <div class="distance-display">
+      Distance: <span id="distance">--</span>
+    </div>
+    <div id="locationDetails"></div>
+  </div>
+</div>
+
+<div id="map"></div>
+
+<div style="margin-top: 20px; font-size: 12px; color: #666;">
+  <p>Data sources: <a href="https://www.gbif.org" target="_blank">GBIF (Global Biodiversity Information Facility)</a></p>
+  <p>Creosote bush occurrences are based on publicly available biodiversity records. Results may vary based on data availability in your region.</p>
+</div>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+<script>
+  let map;
+  let userMarker;
+  let creosoteMarker;
+  let userLocation = null;
+  let nearestCreosote = null;
+
+  // Initialize map
+  function initMap(lat = 34.0522, lon = -118.2437) {
+    if (!map) {
+      map = L.map('map').setView([lat, lon], 10);
+      
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(map);
+    }
+  }
+
+  // Calculate distance between two points using Haversine formula
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Earth's radius in kilometers
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  // Format distance for display
+  function formatDistance(km) {
+    if (km < 1) {
+      return (km * 1000).toFixed(0) + ' meters';
+    } else if (km < 10) {
+      return km.toFixed(2) + ' km';
+    } else {
+      return km.toFixed(1) + ' km (' + (km * 0.621371).toFixed(1) + ' miles)';
+    }
+  }
+
+  // Update status message
+  function showStatus(message, isError = false) {
+    const statusDiv = document.getElementById('statusMessage');
+    statusDiv.className = 'status-message' + (isError ? ' error-message' : '');
+    statusDiv.innerHTML = message;
+  }
+
+  // Fetch creosote bush occurrences from GBIF
+  async function fetchCreosoteData(lat, lon, maxDistance = null) {
+    showStatus('<span class="loading">Searching for creosote bushes worldwide...</span>');
+    
+    // Larrea tridentata taxon key in GBIF (nubKey for accepted species)
+    const taxonKey = 7568403;
+    
+    // Start with nearby search, then expand if needed
+    let searchRadii = [50, 200, 500, 1000, 2000, 5000]; // km
+    let allResults = [];
+    
+    for (let radius of searchRadii) {
+      showStatus(`<span class="loading">Searching within ${radius} km...</span>`);
+      
+      // Calculate lat/lon bounds
+      const latRange = radius / 111; // ~111 km per degree latitude
+      const lonRange = radius / (111 * Math.cos(lat * Math.PI / 180));
+      
+      const url = `https://api.gbif.org/v1/occurrence/search?taxonKey=${taxonKey}&hasCoordinate=true&limit=300&decimalLatitude=${lat - latRange},${lat + latRange}&decimalLongitude=${lon - lonRange},${lon + lonRange}`;
+      
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Failed to fetch data from GBIF');
+        }
+        
+        const data = await response.json();
+        
+        if (data.results && data.results.length > 0) {
+          allResults = data.results.map(record => ({
+            lat: record.decimalLatitude,
+            lon: record.decimalLongitude,
+            locality: record.locality || record.stateProvince || 'Unknown location',
+            recordedBy: record.recordedBy || 'Unknown',
+            year: record.year || 'Unknown year',
+            datasetName: record.datasetName || 'GBIF',
+            key: record.key
+          }));
+          
+          // Found results, stop searching
+          break;
+        }
+      } catch (error) {
+        console.error('Error fetching GBIF data:', error);
+        throw error;
+      }
+    }
+    
+    // If still no results, try a global search with limit
+    if (allResults.length === 0) {
+      showStatus('<span class="loading">Expanding search globally...</span>');
+      const globalUrl = `https://api.gbif.org/v1/occurrence/search?taxonKey=${taxonKey}&hasCoordinate=true&limit=1000`;
+      
+      try {
+        const response = await fetch(globalUrl);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.results && data.results.length > 0) {
+            allResults = data.results.map(record => ({
+              lat: record.decimalLatitude,
+              lon: record.decimalLongitude,
+              locality: record.locality || record.stateProvince || 'Unknown location',
+              recordedBy: record.recordedBy || 'Unknown',
+              year: record.year || 'Unknown year',
+              datasetName: record.datasetName || 'GBIF',
+              key: record.key
+            }));
+          }
+        }
+      } catch (error) {
+        console.error('Error in global search:', error);
+      }
+    }
+    
+    return allResults;
+  }
+
+  // Find the nearest creosote bush
+  function findNearest(userLat, userLon, creosoteBushes) {
+    let nearest = null;
+    let minDistance = Infinity;
+    
+    creosoteBushes.forEach(bush => {
+      const distance = calculateDistance(userLat, userLon, bush.lat, bush.lon);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearest = { ...bush, distance };
+      }
+    });
+    
+    return nearest;
+  }
+
+  // Main function to find nearest creosote
+  async function findNearestCreosote() {
+    const findButton = document.getElementById('findButton');
+    const refreshButton = document.getElementById('refreshButton');
+    
+    findButton.disabled = true;
+    showStatus('<span class="loading">Getting your location...</span>');
+    
+    // Check if geolocation is available
+    if (!navigator.geolocation) {
+      showStatus('Geolocation is not supported by your browser.', true);
+      findButton.disabled = false;
+      return;
+    }
+    
+    // Get user location
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        await performSearch(lat, lon, 'Your current location');
+      },
+      (error) => {
+        let errorMessage = 'Unable to get your location. ';
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            errorMessage += 'Please allow location access or use ZIP code/coordinates below.';
+            break;
+          case error.POSITION_UNAVAILABLE:
+            errorMessage += 'Location information unavailable. Please use ZIP code/coordinates below.';
+            break;
+          case error.TIMEOUT:
+            errorMessage += 'Location request timed out. Please use ZIP code/coordinates below.';
+            break;
+          default:
+            errorMessage += 'Please use ZIP code/coordinates below.';
+        }
+        showStatus(errorMessage, true);
+        findButton.disabled = false;
+      }
+    );
+  }
+
+  // Refresh data function
+  function refreshData() {
+    if (userLocation) {
+      findNearestCreosote();
+    }
+  }
+
+  // Search by ZIP code using Nominatim geocoding
+  async function searchByZip() {
+    const zipInput = document.getElementById('zipInput');
+    const zip = zipInput.value.trim();
+    
+    if (!zip) {
+      showStatus('Please enter a ZIP code.', true);
+      return;
+    }
+    
+    showStatus('<span class="loading">Looking up ZIP code...</span>');
+    
+    try {
+      // Use Nominatim (OpenStreetMap) geocoding service
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?postalcode=${zip}&country=us&format=json&limit=1`);
+      
+      if (!response.ok) {
+        throw new Error('Geocoding service error');
+      }
+      
+      const data = await response.json();
+      
+      if (data.length === 0) {
+        showStatus('ZIP code not found. Please check and try again.', true);
+        return;
+      }
+      
+      const lat = parseFloat(data[0].lat);
+      const lon = parseFloat(data[0].lon);
+      
+      // Use the geocoded location
+      await performSearch(lat, lon, `ZIP ${zip}`);
+      
+    } catch (error) {
+      showStatus('Error looking up ZIP code. Please try again or use coordinates.', true);
+      console.error(error);
+    }
+  }
+
+  // Search by coordinates
+  async function searchByCoordinates() {
+    const latInput = document.getElementById('latInput');
+    const lonInput = document.getElementById('lonInput');
+    
+    const lat = parseFloat(latInput.value.trim());
+    const lon = parseFloat(lonInput.value.trim());
+    
+    if (isNaN(lat) || isNaN(lon)) {
+      showStatus('Please enter valid latitude and longitude values.', true);
+      return;
+    }
+    
+    if (lat < -90 || lat > 90) {
+      showStatus('Latitude must be between -90 and 90.', true);
+      return;
+    }
+    
+    if (lon < -180 || lon > 180) {
+      showStatus('Longitude must be between -180 and 180.', true);
+      return;
+    }
+    
+    await performSearch(lat, lon, `${lat.toFixed(4)}, ${lon.toFixed(4)}`);
+  }
+
+  // Perform the search (used by all search methods)
+  async function performSearch(lat, lon, locationName) {
+    const findButton = document.getElementById('findButton');
+    const refreshButton = document.getElementById('refreshButton');
+    
+    findButton.disabled = true;
+    
+    userLocation = { lat, lon };
+    
+    // Initialize map centered on location
+    initMap(lat, lon);
+    map.setView([lat, lon], 10);
+    
+    // Add user marker
+    if (userMarker) {
+      map.removeLayer(userMarker);
+    }
+    userMarker = L.marker([lat, lon], {
+      icon: L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      })
+    }).addTo(map).bindPopup(`Your location: ${locationName}`).openPopup();
+    
+    try {
+      // Fetch creosote data
+      const creosoteBushes = await fetchCreosoteData(lat, lon);
+      
+      if (creosoteBushes.length === 0) {
+        showStatus('No creosote bush records found in GBIF database. This is unusual - please try again later.', true);
+        findButton.disabled = false;
+        return;
+      }
+      
+      // Find nearest
+      nearestCreosote = findNearest(lat, lon, creosoteBushes);
+      
+      // Add creosote marker
+      if (creosoteMarker) {
+        map.removeLayer(creosoteMarker);
+      }
+      creosoteMarker = L.marker([nearestCreosote.lat, nearestCreosote.lon], {
+        icon: L.icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        })
+      }).addTo(map).bindPopup(`<b>Nearest Creosote Bush</b><br>${nearestCreosote.locality}<br>Distance: ${formatDistance(nearestCreosote.distance)}`);
+      
+      // Draw line between user and creosote
+      L.polyline([
+        [lat, lon],
+        [nearestCreosote.lat, nearestCreosote.lon]
+      ], {
+        color: '#2c5f2d',
+        weight: 3,
+        opacity: 0.7,
+        dashArray: '10, 10'
+      }).addTo(map);
+      
+      // Fit map to show both markers
+      const bounds = L.latLngBounds([
+        [lat, lon],
+        [nearestCreosote.lat, nearestCreosote.lon]
+      ]);
+      map.fitBounds(bounds, { padding: [50, 50] });
+      
+      // Display distance info
+      document.getElementById('distance').textContent = formatDistance(nearestCreosote.distance);
+      document.getElementById('locationDetails').innerHTML = `
+        <p><strong>Location:</strong> ${nearestCreosote.locality}</p>
+        <p><strong>Recorded by:</strong> ${nearestCreosote.recordedBy} (${nearestCreosote.year})</p>
+        <p><strong>Coordinates:</strong> ${nearestCreosote.lat.toFixed(4)}, ${nearestCreosote.lon.toFixed(4)}</p>
+      `;
+      document.getElementById('distanceInfo').style.display = 'block';
+      
+      showStatus(`Found ${creosoteBushes.length} creosote bush records!`);
+      refreshButton.style.display = 'inline-block';
+      findButton.disabled = false;
+      
+    } catch (error) {
+      showStatus('Error fetching creosote bush data. Please try again.', true);
+      console.error(error);
+      findButton.disabled = false;
+    }
+  }
+
+  // Initialize map on load
+  window.addEventListener('load', () => {
+    initMap();
+  });
+</script>
